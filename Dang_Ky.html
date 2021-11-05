@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resources/Sub_Acount.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/v4-shims.css">
+    <title>Document</title>
+    <style>
+        header {
+            height: 50px;
+            color: rgb(233, 95, 15);
+            background-color: #fff;
+            display: flex;
+            font-size: 50px;
+            margin-bottom: 20px;
+            justify-content: space-between;
+            margin-top: 3px;
+            align-items: center;
+        }
+
+        .Dang_ky {
+            padding-left: 35px;
+            font-size: 30px;
+        }
+
+        .Tro_giup {
+            padding-right: 20px;
+            font-size: 22px;
+            padding-top: 15px;
+        }
+        a{
+            text-decoration: none;
+            color:red;
+        }
+        @media (max-width: 486px) {
+            .header {
+                margin-top: 60px;
+                padding-top: 20px;
+            }
+
+            .Dang_ky {
+                padding-left: 30px;
+                font-size: 20px;
+            }
+
+            .Tro_giup {
+                padding-right: 3px;
+                font-size: 15px;
+                padding-top: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="Dang_ky">
+            <i class="fas fa-shopping-cart"></i>
+            <span style="font-size:25px;">Đăng ký</span>
+        </div>
+        <div class="Tro_giup">Cần trợ giúp?</div>
+    </header>
+    <img src="https://image-us.eva.vn/upload/3-2021/images/2021-09-06/shopee-mo-man-mua-sale-soi-dong-nhat-nam-voi-su-kien-99-ngay-sieu-mua-sam-1-1630912878-184-width2048height1152.png"
+        alt="">
+    <div class="main">
+        <form action="" method="POST" class="form" id="form-1">
+            <h3 class="heading">Đăng ký Shopee</h3>
+            <div class="spacer"></div>
+
+            <div class="form-group">
+                <label class="form-label" for="fullname">Tên đầy đủ</label>
+                <input type="text" id="fullname" class="form-control" name="fullname" placeholder="VD: Phạm Tùng Dương">
+                <span class="form-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="email">Email</label>
+                <input type="text" id="email" class="form-control" name="email" placeholder="VD: email@domain.com">
+                <span class="form-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="password">Mật khẩu</label>
+                <input type="password" id="password" class="form-control" name="password" placeholder="Nhập mật khẩu">
+                <span class="form-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="password_confirmation">Nhập lại mật khẩu</label>
+                <input type="password" id="password_confirmation" class="form-control" name="password_confirmation"
+                    placeholder="Nhập lại mật khẩu">
+                <span class="form-message"></span>
+            </div>
+            <div>
+                <p>Bằng việc đăng ký, bạn đã đồng ý với Shopee về</p>
+                <p style="color:red;">Điều khoản dịch vụ <span  style="color:black">&</span> Chính sách bảo mật</p>
+                <br>
+                <div>Bạn đã có tài khoản? <span><a href="#">Đăng nhập</a></span></div>
+            </div>
+            <button class="form-submit">Đăng ký</button>
+        </form>
+    </div>
+</body>
+<script src="resources/main.js"></script>
+<script>
+    Validator({
+        form: "#form-1",
+        formGroup: '.form-group',
+        rules: [
+            Validator.isRequired('#fullname', "Vui lòng nhập tên đầy đủ"), // đây là rule
+            Validator.isRequired('#email'), // đây là rule
+            Validator.isEmail('#email'), // đây là rule
+            Validator.minlength('#password', 6), // đây là rule
+            Validator.isRequired('#password_confirmation'),
+            Validator.isRequired('#avatar'),
+            Validator.isRequired('#province'),
+            Validator.isRequired('input[name = "gender"]'),
+            Validator.isConfimed('#password_confirmation', function () {
+                return document.querySelector("#form-1 #password").value;
+            }, 'Mật khẩu nhập vào không chính xác'),
+        ],
+        onSubmit: function (data) {
+            console.log(data);
+        }
+    })
+</script>
+
+</html>

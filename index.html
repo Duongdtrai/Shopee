@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="resources/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/v4-shims.css">
+    <title>Việt Nam</title>
+    <style>
+        .search {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+            position: absolute;
+        }
+
+        .text {
+            color: #fff;
+            font-size: 50px;
+            padding-left: 111px;
+            padding-bottom: 100px;
+        }
+
+        .search_text {
+            margin: 0 auto;
+            margin-bottom: 77px;
+            position: relative;
+        }
+
+        .search_text #search_icon {
+            box-sizing: border-box;
+            position: absolute;
+            right: 8px;
+            top: 6px;
+            color: #fff;
+            font-size: 23px;
+            width: 9%;
+            height: 38px;
+            padding: 8px;
+            background-image: linear-gradient(to bottom, rgb(241, 56, 56), rgb(236, 128, 85));
+
+        }
+
+        .search_text #search_icon:hover {
+            cursor: pointer;
+            background-image: linear-gradient(to bottom, rgb(248, 31, 31), rgb(212, 109, 69));
+        }
+
+        ::placeholder {
+            padding-left: 3px;
+        }
+
+        input {
+            width: 800px;
+            height: 50px;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            outline: none;
+        }
+
+      
+
+        .main {
+            margin-top: 28px;
+            display: flex;
+
+        }
+
+        .main_first {
+            width: 17%;
+            margin-left: 1px;
+
+        }
+
+        .main_first img {
+            width: 100%;
+        }
+
+        .main_second {
+            width: 66%;
+            height: auto;
+
+        }
+
+        .main_third {
+            width: 17%;
+            margin-right: 1px;
+        }
+
+        .main_third img {
+            width: 100%;
+        }
+        .slides{
+            margin-left:10px;
+            width: 100%;
+        }
+        .mySlides {
+            display: none;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Caption text */
+        .text1 {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active {
+            background-color: #717171 !important;
+            display: inline-block !important;
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+            .text1 {
+                font-size: 11px
+            }
+        }
+
+ 
+
+        .product {
+            display: flex;
+            margin-top: 4px;
+            margin-bottom: 42px;
+        }
+
+        .product1 {
+            margin-right: 22px;
+            margin-left: 22px;
+            box-sizing: border-box;
+            border: 1px solid red;
+            width: 29%;
+            height: 464px;
+            position: relative;
+        }
+
+        .product1 img {
+            box-sizing: border-box;
+            width: 100%;
+            height: 60%;
+            margin-bottom: 5px;
+        }
+
+        .content {
+            margin-top: 10px;
+            margin-left: 6px;
+            padding-left: 3px;
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .price {
+            width: 90px;
+            height: auto;
+            background-color: rgb(236, 128, 85);
+            outline: 3px dashed rgb(236, 128, 85);
+            text-align: center;
+            margin: 0 auto;
+            line-height: normal;
+        }
+
+        .tien {
+            position: absolute;
+            bottom: 0;
+            left: 5px;
+        }
+
+        .view_shoppe {
+            position: absolute;
+            bottom: 0;
+            right: 5px;
+        }
+
+        .next_page {
+            display: flex;
+            width: 100%;
+            height: auto;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            
+        }
+
+        .next_number {
+            margin-right: 50px;
+            margin-left: 45px;
+            text-align: center;
+            line-height:1.8rem;
+        }
+        .next_number:hover{
+            cursor: pointer;
+        }
+        .page1 {
+            width: 100%;
+            display: none;
+        }
+
+        .active1 {
+            display: block;
+            background-color: white;
+            transition: all 0.2s ease;
+        }
+        .active2{
+            width: 40px; 
+            height:31px;
+            background-color: #ee4d2d;
+        }
+        .active2:hover{
+            background-color: #df725c;
+        }
+        .footer {
+            background-color: #f1f1f1;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            flex-wrap: wrap;
+
+        }
+        .infomation{
+            margin-top: 30px;
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+        .infomation a{
+            display: flex;
+            color: black;
+            align-items: center;
+            text-decoration: none;
+        }
+        .infomation a:hover{
+            color: #df725c;
+        }
+        @media (max-width: 1200px) {
+            .search {
+                flex-direction: column;
+            }
+
+            .text {
+                margin-top: -15px;
+                padding-bottom: 0px;
+                padding-left: 20px;
+                /**/
+            }
+            .main {
+                width:100%;
+            }
+            .slides{
+                margin: 0;
+            }
+            .main_first {
+                display:none;
+            }
+
+            .main_second {
+                width: 100%;
+                height: auto;
+                margin: 0 auto !important;
+                padding-left: 4px;
+
+            }
+
+            .main_third {
+                 display: none;
+            }
+
+            .main_third img {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 1060px) {
+            .search {
+                flex-direction: column;
+            }
+
+            .text {
+                margin-top: -39px;
+                padding-bottom: 0px;
+                padding-left: 20px;
+                /**/
+            }
+        }
+
+        @media (max-width: 810px) {
+            .search {
+                flex-direction: column;
+            }
+
+            input {
+                width: 500px;
+            }
+            .product{
+                display:block;
+                margin-bottom: 30px;
+            }
+            .product1 {
+                margin-bottom: 30px !important;
+                margin :0 auto;
+                box-sizing: border-box;
+                border: 1px solid red;
+                width: 73%;
+                height: 464px;
+                position: relative;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .search {
+                flex-direction: column;
+            }
+
+            input {
+                width: 300px;
+            }
+        }
+       
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="nav">
+            <div class="nav_pc">
+                <ul class="list_nav_pc">
+                    <li>
+                        <a href="#header">Trang chủ</a>
+                    </li>
+
+                    <li>
+                        <a href="">Thông tin</a>
+                    </li>
+                    <li>
+                        <a href="">Giới thiệu</a>
+                    </li>
+                    <li>
+                        <a href="">Liên hệ</a>
+                    </li>
+                    <li>
+                        <a href="">Đánh giá</a>
+                    </li>
+                    <li>
+                        <a href="">Mua hàng</a>
+                    </li>
+                </ul>
+            </div>
+            <label class="nav_bars" for="nav_input_type">
+                <i id="bars" class="fas fa-bars" style="font-size:30px"></i>
+            </label>
+            <input type="checkbox" name="nav_input_type" class="nav_input_type" id="nav_input_type" value="">
+            <label for="nav_input_type" class="nav_overplay"></label>
+            <input type="checkbox" name="nav_input_type" class="nav_input_type" id="nav_input_type" value="">
+            <div class="nav_mobile">
+                <ul class="list_nav_mobile">
+
+                    <li>
+                        <i style="margin-left:0px;" id="icons1" class="fas fa-home"></i>
+                        <a style="margin-left:0px ;" class="list_check_icon_1" href="">Trang chủ</a>
+                    </li>
+
+                    <li>
+                        <i id="icons2" class="fas fa-info"></i>
+                        <a style="margin-left:20px ;" class="list_check_icon_2" href="">Thông tin</a>
+                    </li>
+
+                    <li>
+                        <i id="icons3" class="fas fa-address-book"></i>
+                        <a style="margin-left:13px ;" class="list_check_icon_3" href="">Giới thiệu</a>
+                    </li>
+
+                    <li>
+                        <i id="icon4" class="fas fa-phone-square-alt"></i>
+                        <a style="margin-left:13px ;" class="list_check_icon_4" href="">Liên hệ</a>
+                    </li>
+
+                    <li>
+                        <i id="icon5" class="fas fa-american-sign-language-interpreting"></i>
+                        <a style="margin-left:7px ;" class="list_check_icon_5" href="">Đánh giá</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-shopping-cart"></i>
+                        <a style="margin-left:7px ;" class="list_check_icon_6" href="">Mua hàng</a>
+                    </li>
+                </ul>
+                <label for="nav_input_type" class="naw_mobile_close">
+                    <i class="fas fa-times"></i>
+                </label>
+
+            </div>
+            <div class="Singup">
+                <div href="" class="Singup_Account">
+                    <a href="">Đăng nhập</a>
+                </div>
+                <div class="Singup_Subscribe">
+                    <a href="">Đăng ký</a>
+                </div>
+            </div>
+        </div>
+        <div class="search">
+            <div class="text">
+                <i class="fas fa-shopping-cart"></i>
+                <span>Shoppe</span>
+            </div>
+            <div class="search_text">
+                <input type="text" id="search_text" placeholder="Chỉ 1Đ ăn cả thế giới">
+                <i id="search_icon" class="fas fa-search"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- main -->
+    <div class="main">
+        <div class="main_first">
+            <img src="https://icdn.dantri.com.vn/thumb_w/640/2019/03/06/nhiepanhgia-2-1551849137024.jpg" alt="">
+        </div>
+
+        <div class="main_second">
+            <div class="slides">
+                <div class="slideshow-container">
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 6</div>
+                        <img src="https://businessmirror.com.ph/wp-content/uploads/2020/10/1-11.11-KV-with-BA-KA.jpg"
+                            style="width:98%; height: 471px;">
+                        <div class="text1">Shoppe One</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 6</div>
+                        <img src="https://cf.shopee.vn/file/403f5386971812081891c0ee20b3cc80"
+                            style="width:98% ;height: 471px;">
+                        <div class="text1">Shoppe Two</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 6</div>
+                        <img src="https://businessmirror.com.ph/wp-content/uploads/2021/08/9.9-Celebrity-Reveal-Main-KV.jpg"
+                            style="width:98%; height: 471px;">
+                        <div class="text1">Shoppe Three</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">4 / 6</div>
+                        <img src="https://businessmirror.com.ph/wp-content/uploads/2021/08/9.9-Celebrity-Reveal-Main-KV.jpg"
+                            style="width:98%; height: 471px;">
+                        <div class="text1">Shoppe four</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">5 / 6</div>
+                        <img src="https://businessmirror.com.ph/wp-content/uploads/2021/08/9.9-Celebrity-Reveal-Main-KV.jpg"
+                            style="width:98%; height: 471px;">
+                        <div class="text1">Shoppe five</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">6 / 6</div>
+                        <img src="https://businessmirror.com.ph/wp-content/uploads/2021/08/9.9-Celebrity-Reveal-Main-KV.jpg"
+                            style="width:98%; height: 471px;">
+                        <div class="text1">Shoppe six</div>
+                    </div>
+
+                </div>
+                <br>
+                <div style="text-align:center">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+
+                </div>
+            </div>
+            <div class="page1 active1" id = "1">
+                <div class="product">
+                    <div class="product1">
+                        <img src="https://storage.googleapis.com/cdn.nhanh.vn/store1/45885/ps/20200827/16550974485_549763519.jpg"
+                            alt="">
+                        <div class="content">
+                            <div>Kem dưỡng da dành cho nam giới</div>
+                            <div> Mã hàng: <span style="font-weight: bold;">ABC123</span> </div>
+                        </div>
+                        <div class="price">
+                            Giảm đ10k
+                        </div>
+
+                        <div class="tien"><span>đ</span>60.000</div>
+                        <div class="view_shoppe">Đã bán 1,1k</div>
+
+                    </div>
+                    <div class="product1">
+                        <img src="https://cf.shopee.vn/file/ee1d35f3024e30b6e7ec7f3506146919"
+                            alt="">
+                        <div class="content">
+                            <div>Kem dưỡng da dành cho nam giới</div>
+                            <div> Mã hàng: <span style="font-weight: bold;">ABC123</span> </div>
+                        </div>
+                        <div class="price">
+                            Giảm đ10k
+                        </div>
+
+                        <div class="tien"><span>đ</span>60.000</div>
+                        <div class="view_shoppe">Đã bán 1,1k</div>
+
+                    </div>
+                    <div class="product1">
+                        <img src="https://cf.shopee.vn/file/7b5e72396679c83b0dfc9c90d4ac1209"
+                            alt="">
+                        <div class="content">
+                            <div>Kem dưỡng da dành cho nam giới</div>
+                            <div> Mã hàng: <span style="font-weight: bold;">ABC123</span> </div>
+                        </div>
+                        <div class="price">
+                            Giảm đ10k
+                        </div>
+
+                        <div class="tien"><span>đ</span>60.000</div>
+                        <div class="view_shoppe">Đã bán 1,1k</div>
+
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product1">
+                        <img src="https://icdn.dantri.com.vn/thumb_w/640/2019/03/06/nhiepanhgia-2-1551849137024.jpg"
+                            alt="">
+                        <div class="content">
+                            <div>Kem dưỡng da dành cho nam giới</div>
+                            <div> Mã hàng: <span style="font-weight: bold;">ABC123</span> </div>
+                        </div>
+                        <div class="price">
+                            Giảm đ10k
+                        </div>
+
+                        <div class="tien"><span>đ</span>60.000</div>
+                        <div class="view_shoppe">Đã bán 1,1k</div>
+
+                    </div>
+                    <div class="product1">
+                        <img src="https://icdn.dantri.com.vn/thumb_w/640/2019/03/06/nhiepanhgia-2-1551849137024.jpg"
+                            alt="">
+                        <div class="content">
+                            <div>Kem dưỡng da dành cho nam giới</div>
+                            <div> Mã hàng: <span style="font-weight: bold;">ABC123</span> </div>
+                        </div>
+                        <div class="price">
+                            Giảm đ10k
+                        </div>
+
+                        <div class="tien"><span>đ</span>60.000</div>
+                        <div class="view_shoppe">Đã bán 1,1k</div>
+
+                    </div>
+                    <div class="product1">
+                        <img src="https://icdn.dantri.com.vn/thumb_w/640/2019/03/06/nhiepanhgia-2-1551849137024.jpg"
+                            alt="">
+                        <div class="content">
+                            <div>Kem dưỡng da dành cho nam giới</div>
+                            <div> Mã hàng: <span style="font-weight: bold;">ABC123</span> </div>
+                        </div>
+                        <div class="price">
+                            Giảm đ10k
+                        </div>
+
+                        <div class="tien"><span>đ</span>60.000</div>
+                        <div class="view_shoppe">Đã bán 1,1k</div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="page1" id = "2">
+                <div class="product">
+                    <div class="product1">
+                        <img src="https://cdn.nguyenkimmall.com/images/detailed/555/may-anh-cho-nguoi-moi.jpg"
+                            alt="">
+                        <div class="content">
+                            <div>Kem dưỡng da dành cho nam giới</div>
+                            <div> Mã hàng: <span style="font-weight: bold;">ABC123</span> </div>
+                        </div>
+                        <div class="price">
+                            Giảm đ10k
+                        </div>
+
+                        <div class="tien"><span>đ</span>60.000</div>
+                        <div class="view_shoppe">Đã bán 1,1k</div>
+
+                    </div>
+                    <div class="product1">
+                        <img src="https://icdn.dantri.com.vn/thumb_w/640/2019/03/06/nhiepanhgia-2-1551849137024.jpg"
+                            alt="">
+                        <div class="content">
+                            <div>Kem dưỡng da dành cho nam giới</div>
+                            <div> Mã hàng: <span style="font-weight: bold;">ABC123</span> </div>
+                        </div>
+                        <div class="price">
+                            Giảm đ10k
+                        </div>
+
+                        <div class="tien"><span>đ</span>60.000</div>
+                        <div class="view_shoppe">Đã bán 1,1k</div>
+
+                    </div>
+                    <div class="product1">
+                        <img src="https://icdn.dantri.com.vn/thumb_w/640/2019/03/06/nhiepanhgia-2-1551849137024.jpg"
+                            alt="">
+                        <div class="content">
+                            <div>Kem dưỡng da dành cho nam giới</div>
+                            <div> Mã hàng: <span style="font-weight: bold;">ABC123</span> </div>
+                        </div>
+                        <div class="price">
+                            Giảm đ10k
+                        </div>
+
+                        <div class="tien"><span>đ</span>60.000</div>
+                        <div class="view_shoppe">Đã bán 1,1k</div>
+
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product1">
+                        <img src="https://icdn.dantri.com.vn/thumb_w/640/2019/03/06/nhiepanhgia-2-1551849137024.jpg"
+                            alt="">
+                        <div class="content">
+                            <div>Kem dưỡng da dành cho nam giới</div>
+                            <div> Mã hàng: <span style="font-weight: bold;">ABC123</span> </div>
+                        </div>
+                        <div class="price">
+                            Giảm đ10k
+                        </div>
+
+                        <div class="tien"><span>đ</span>60.000</div>
+                        <div class="view_shoppe">Đã bán 1,1k</div>
+
+                    </div>
+                    <div class="product1">
+                        <img src="https://icdn.dantri.com.vn/thumb_w/640/2019/03/06/nhiepanhgia-2-1551849137024.jpg"
+                            alt="">
+                        <div class="content">
+                            <div>Kem dưỡng da dành cho nam giới</div>
+                            <div> Mã hàng: <span style="font-weight: bold;">ABC123</span> </div>
+                        </div>
+                        <div class="price">
+                            Giảm đ10k
+                        </div>
+
+                        <div class="tien"><span>đ</span>60.000</div>
+                        <div class="view_shoppe">Đã bán 1,1k</div>
+
+                    </div>
+                    <div class="product1">
+                        <img src="https://media-cdn.laodong.vn/Storage/NewsPortal/2021/5/26/913299/Ngan-Ha25.jpg"
+                            alt="">
+                        <div class="content">
+                            <div>Kem dưỡng da dành cho nam giới</div>
+                            <div> Mã hàng: <span style="font-weight: bold;">ABC123</span> </div>
+                        </div>
+                        <div class="price">
+                            Giảm đ10k
+                        </div>
+
+                        <div class="tien"><span>đ</span>60.000</div>
+                        <div class="view_shoppe">Đã bán 1,1k</div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="page1" id = "3">
+                <div class="product">
+                    <div class="product1">
+                        <img src="https://icdn.dantri.com.vn/thumb_w/640/2019/03/06/nhiepanhgia-2-1551849137024.jpg"
+                            alt="">
+                        <div class="content">
+                            <div>Kem dưỡng da dành cho nam giới</div>
+                            <div> Mã hàng: <span style="font-weight: bold;">ABC123</span> </div>
+                        </div>
+                        <div class="price">
+                            Giảm đ10k
+                        </div>
+
+                        <div class="tien"><span>đ</span>60.000</div>
+                        <div class="view_shoppe">Đã bán 1,1k</div>
+
+                    </div>
+                    <div class="product1">
+                        <img src="https://icdn.dantri.com.vn/thumb_w/640/2019/03/06/nhiepanhgia-2-1551849137024.jpg"
+                            alt="">
+                        <div class="content">
+                            <div>Kem dưỡng da dành cho nam giới</div>
+                            <div> Mã hàng: <span style="font-weight: bold;">ABC123</span> </div>
+                        </div>
+                        <div class="price">
+                            Giảm đ10k
+                        </div>
+
+                        <div class="tien"><span>đ</span>60.000</div>
+                        <div class="view_shoppe">Đã bán 1,1k</div>
+
+                    </div>
+                    <div class="product1">
+                        <img src="https://icdn.dantri.com.vn/thumb_w/640/2019/03/06/nhiepanhgia-2-1551849137024.jpg"
+                            alt="">
+                        <div class="content">
+                            <div>Kem dưỡng da dành cho nam giới</div>
+                            <div> Mã hàng: <span style="font-weight: bold;">ABC123</span> </div>
+                        </div>
+                        <div class="price">
+                            Giảm đ10k
+                        </div>
+
+                        <div class="tien"><span>đ</span>60.000</div>
+                        <div class="view_shoppe">Đã bán 1,1k</div>
+
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product1">
+                        <img src="https://icdn.dantri.com.vn/thumb_w/640/2019/03/06/nhiepanhgia-2-1551849137024.jpg"
+                            alt="">
+                        <div class="content">
+                            <div>Kem dưỡng da dành cho nam giới</div>
+                            <div> Mã hàng: <span style="font-weight: bold;">ABC123</span> </div>
+                        </div>
+                        <div class="price">
+                            Giảm đ10k
+                        </div>
+
+                        <div class="tien"><span>đ</span>60.000</div>
+                        <div class="view_shoppe">Đã bán 1,1k</div>
+
+                    </div>
+                    <div class="product1">
+                        <img src="https://icdn.dantri.com.vn/thumb_w/640/2019/03/06/nhiepanhgia-2-1551849137024.jpg"
+                            alt="">
+                        <div class="content">
+                            <div>Kem dưỡng da dành cho nam giới</div>
+                            <div> Mã hàng: <span style="font-weight: bold;">ABC123</span> </div>
+                        </div>
+                        <div class="price">
+                            Giảm đ10k
+                        </div>
+
+                        <div class="tien"><span>đ</span>60.000</div>
+                        <div class="view_shoppe">Đã bán 1,1k</div>
+
+                    </div>
+                    <div class="product1">
+                        <img src="https://cellphones.com.vn/sforum/wp-content/uploads/2018/11/3-8.png"
+                            alt="">
+                        <div class="content">
+                            <div>Kem dưỡng da dành cho nam giới</div>
+                            <div> Mã hàng: <span style="font-weight: bold;">ABC123</span> </div>
+                        </div>
+                        <div class="price">
+                            Giảm đ10k
+                        </div>
+
+                        <div class="tien"><span>đ</span>60.000</div>
+                        <div class="view_shoppe">Đã bán 1,1k</div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="next_page">
+                <div class="next_number"><</div> 
+                <div class="next_number active2">1</div>
+                <div class="next_number">2</div>
+                <div class="next_number">3</div>
+                <div class="next_number">></div>
+            </div>
+        </div>
+        <div class="main_third">
+            <img src="https://icdn.dantri.com.vn/thumb_w/640/2019/03/06/nhiepanhgia-2-1551849137024.jpg" alt="">
+        </div>
+    </div>
+
+
+    <!-- footer -->
+    <div class="footer">
+        
+            <div class="infomation">
+                <div>CHĂM SÓC KHÁCH HÀNG</div>
+                <div>Trung Tâm Trợ Giúp</div>
+                <div>Shopee Blog</div>
+                <div>Shopee Mall</div>
+                <div>Hướng Dẫn Mua Hàng</div>
+                <div>Hướng Dẫn Bán Hàng</div>
+                <div>Thanh Toán</div>
+                <div>Shopee Xu</div>
+                <div>Vận Chuyển</div>
+                <div>Trả Hàng & Hoàn Tiền</div>
+                <div>Chăm Sóc Khách Hàng</div>
+                <div>Chính Sách Bảo Hành</div>
+            </div>
+            <div class="infomation">
+                <div>VỀ SHOPEE</div>
+                <div>Giới Thiệu Về Shopee Việt Nam</div>
+                <div>Tuyển Dụng</div>
+                <div>Điều Khoản Shopee</div>
+                <div>Chính Sách Bảo Mật</div>
+                <div>Chính Hãng</div>
+                <div>Kênh Người Bán</div>
+                <div>Flash Sales</div>
+                <div>Chương Trình Tiếp Thị Liên Kết Shopee</div>
+                <div>Liên Hệ Với Truyền Thông</div>
+            </div>
+        
+
+        
+            <div class="infomation">
+                <div>THEO DÕI CHÚNG TÔI TRÊN</div>
+                <a href=""><i style="margin-right: 4px;" class="fab fa-facebook"></i> Facebook</a>
+                <a href=""><i style="margin-right: 4px;" class="fab fa-instagram"></i> Instagram</a>
+                <a href=""><i style="margin-right: 4px;" class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+            <div class="infomation">
+                <div>QUỐC GIA & KHU VỰC</div>
+                <div>VIỆT NAM</div>
+                <div>Singapore</div>
+                <div>Indonesia</div>
+                <div>Đài Loan</div>
+                <div>Thái Lan</div>
+                <div>Malaysia</div>
+                <div>Philippines</div>
+                <div>México</div>
+                <div>Brazil</div>
+                <div>Colombia</div>
+                <div>Chile</div>
+                <div>Poland</div>
+                <div>Spain</div>
+                <div>France</div>
+            </div>
+        
+
+    </div>
+
+</body>
+
+<script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+</script>
+<script src="resources/main.js"></script>
+<script src="resources/page.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+</script>
+<script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.15.4/js/v4-shims.js"></script>
+
+
+</html>

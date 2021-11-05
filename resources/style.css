@@ -1,0 +1,166 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-image: linear-gradient(to bottom, rgb(241, 56, 56) , rgb(236, 128, 85));
+    height: 200px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+nav {
+    height: 55px;
+    display: flex;
+    align-items: center;
+}
+
+.nav_pc {
+    height: 55px;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.list_nav_pc li {
+    padding-top: 15px;
+    padding-right: 20px;
+}
+
+.list_nav_pc li a {
+    color: white;
+}
+
+.nav_bars {
+    margin-top: 12px;
+    height: 55px;
+    display: none;
+}
+
+.nav_mobile {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    background-color: #fff;
+    width: 300px;
+    transform: translateX(-100%);
+    transition: transform linear 0.2s;
+}
+
+.list_nav_mobile {
+    display: block;
+    margin-top: 50px;
+    margin-left: -24px;
+}
+
+.list_nav_mobile li {
+    margin-top: 20px;
+    margin-left: 20px;
+
+}
+
+.list_nav_mobile li a {
+    color: black;
+    padding: 20px
+}
+
+.naw_mobile_close {
+    font-size: 1.4rem;
+    position: absolute;
+    top: 1rem;
+    width: 20px;
+    height: 20px;
+    right: 1rem;
+    color: rgb(40, 59, 59);
+    font-size: 25px;
+
+}
+
+.nav_overplay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    animation: fadein linear 0.2s;
+    z-index: 9;
+}
+
+.nav_input_type {
+    display: none;
+}
+
+.nav_input_type:checked~.nav_overplay {
+    display: block;
+}
+
+.nav_input_type:checked~.nav_mobile {
+    transform: translateX(0%);
+}
+
+.Singup {
+    position: absolute;
+    display: flex;
+    font-size: 20px;
+    color: white;
+    right: 0;
+}
+.Singup_Account a{
+    text-decoration: none;
+    color: white;
+}
+.Singup_Subscribe a{
+    text-decoration: none;
+    color: white;
+}
+.Singup div {
+    line-height: 3rem;
+    padding-right: 20px;
+}
+
+.Singup a:hover {
+    cursor: pointer;
+    color: rgb(187, 180, 180);
+}
+
+li a:hover {
+    color: rgb(187, 180, 180);
+    text-decoration: none;
+
+}
+
+#icons1 {
+    font-size: 25px;
+    padding-left: 0.5px;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1080px) {
+    .nav_pc {
+        display: none;
+    }
+
+    .nav_bars {
+        display: block;
+        margin-left: 20px;
+    }
+}
