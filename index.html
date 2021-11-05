@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="resources/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/v4-shims.css">
-    <title>Việt Nam</title>
+    <link rel="shortcut icon" type="image/png" href="https://cityexpress.vn/assets/img/shopee.png" />
+    <title>Shopee</title>
     <style>
         .search {
             display: flex;
@@ -69,17 +70,26 @@
         .main {
             margin-top: 28px;
             display: flex;
+           
 
         }
 
         .main_first {
             width: 17%;
-            margin-left: 1px;
+            margin-left: 2px;
+            /* background-image: url("https://icdn.dantri.com.vn/thumb_w/640/2019/03/06/nhiepanhgia-2-1551849137024.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100px 100px; */
 
         }
 
         .main_first img {
             width: 100%;
+          
+            display: block;
+            margin-top:50px;
+            padding-left: 2px;
         }
 
         .main_second {
@@ -87,18 +97,26 @@
             height: auto;
 
         }
-
         .main_third {
             width: 17%;
-            margin-right: 1px;
+            margin-right: 2px;
+            /* background-image: url("https://goclamweb.com/wp-content/uploads/2018/04/ava-fb-28.png");
+            background-repeat: no-repeat;
+            background-attachment: fixed; */
+        
         }
 
         .main_third img {
             width: 100%;
+            height:auto;
+            display: block;
+            margin-top:50px;
+            padding-right: 2px;
         }
         .slides{
             margin-left:10px;
             width: 100%;
+         
         }
         .mySlides {
             display: none;
@@ -198,10 +216,12 @@
             margin-right: 22px;
             margin-left: 22px;
             box-sizing: border-box;
-            border: 1px solid red;
+            border: 1px solid rgb(206, 192, 192);
             width: 29%;
             height: 464px;
             position: relative;
+            box-shadow: 0px 2px 12px rgb(185, 183, 183);
+
         }
 
         .product1 img {
@@ -370,10 +390,10 @@
                 margin-bottom: 30px !important;
                 margin :0 auto;
                 box-sizing: border-box;
-                border: 1px solid red;
                 width: 73%;
                 height: 464px;
                 position: relative;
+                box-shadow: 0px 2px 12px rgb(185, 183, 183);
             }
         }
 
@@ -385,8 +405,41 @@
             input {
                 width: 300px;
             }
+            .next_page {
+                display: flex;
+                width: 100%;
+                height: auto;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                
+            }
+
+            .next_number {
+                margin-right: 35px;
+                margin-left: 25px;
+                text-align: center;
+                line-height:1.8rem;
+            }
         }
-       
+       @media (min-width: 400px) {
+            .next_page {
+                    display: flex;
+                    width: 100%;
+                    height: auto;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    
+                }
+
+            .next_number {
+                margin-right: 25px;
+                margin-left: 25px;
+                text-align: center;
+                line-height:1.8rem;
+            }
+       }
     </style>
 </head>
 
@@ -413,7 +466,7 @@
                         <a href="">Đánh giá</a>
                     </li>
                     <li>
-                        <a href="">Mua hàng</a>
+                        <a href="https://duongdtrai.github.io/Shopee/mua_hang">Mua hàng</a>
                     </li>
                 </ul>
             </div>
@@ -452,7 +505,7 @@
                     </li>
                     <li>
                         <i class="fas fa-shopping-cart"></i>
-                        <a style="margin-left:7px ;" class="list_check_icon_6" href="">Mua hàng</a>
+                        <a style="margin-left:7px ;" class="list_check_icon_6" href="https://duongdtrai.github.io/Shopee/mua_hang">Mua hàng</a>
                     </li>
                 </ul>
                 <label for="nav_input_type" class="naw_mobile_close">
@@ -461,11 +514,11 @@
 
             </div>
             <div class="Singup">
-                <div href="" class="Singup_Account">
-                    <a href="">Đăng nhập</a>
+                <div  class="Singup_Account">
+                    <a href="https://duongdtrai.github.io/Shopee/Dang_nhap">Đăng nhập</a>
                 </div>
                 <div class="Singup_Subscribe">
-                    <a href="">Đăng ký</a>
+                    <a href="https://duongdtrai.github.io/Shopee/Dang_Ky">Đăng ký</a>
                 </div>
             </div>
         </div>
@@ -484,7 +537,7 @@
     <!-- main -->
     <div class="main">
         <div class="main_first">
-            <img src="https://icdn.dantri.com.vn/thumb_w/640/2019/03/06/nhiepanhgia-2-1551849137024.jpg" alt="">
+            <img src="https://img.lovepik.com/free-template/01/42/47/25WpIkbEsTzXq.jpg_master.jpg!detail808" alt="">
         </div>
 
         <div class="main_second">
@@ -493,40 +546,40 @@
 
                     <div class="mySlides fade">
                         <div class="numbertext">1 / 6</div>
-                        <img src="https://businessmirror.com.ph/wp-content/uploads/2020/10/1-11.11-KV-with-BA-KA.jpg"
-                            style="width:98%; height: 471px;">
+                        <img src="https://paroda.vn/media/2021/06/tai-sao-shop-tren-shopee-cua-ban-bi-xoa.jpg"
+                            style="width:98%; height: auto;">
                         <div class="text1">Shoppe One</div>
                     </div>
 
                     <div class="mySlides fade">
                         <div class="numbertext">2 / 6</div>
-                        <img src="https://cf.shopee.vn/file/403f5386971812081891c0ee20b3cc80"
-                            style="width:98% ;height: 471px;">
+                        <img src="https://cf.shopee.sg/file/27963ec7543724d068eba5d4c52214c1"
+                            style="width:98% ;height: auto;">
                         <div class="text1">Shoppe Two</div>
                     </div>
 
                     <div class="mySlides fade">
                         <div class="numbertext">3 / 6</div>
-                        <img src="https://businessmirror.com.ph/wp-content/uploads/2021/08/9.9-Celebrity-Reveal-Main-KV.jpg"
-                            style="width:98%; height: 471px;">
+                        <img src="https://wiki.tino.org/wp-content/uploads/2021/07/word-image-354.jpeg"
+                            style="width:98%; height: auto;">
                         <div class="text1">Shoppe Three</div>
                     </div>
                     <div class="mySlides fade">
                         <div class="numbertext">4 / 6</div>
-                        <img src="https://businessmirror.com.ph/wp-content/uploads/2021/08/9.9-Celebrity-Reveal-Main-KV.jpg"
-                            style="width:98%; height: 471px;">
+                        <img src="https://doopage.com/assets/uploads/2019/05/dang-ban-san-pham-tren-shopee.jpg"
+                            style="width:98%; height: auto;">
                         <div class="text1">Shoppe four</div>
                     </div>
                     <div class="mySlides fade">
                         <div class="numbertext">5 / 6</div>
-                        <img src="https://businessmirror.com.ph/wp-content/uploads/2021/08/9.9-Celebrity-Reveal-Main-KV.jpg"
-                            style="width:98%; height: 471px;">
+                        <img src="https://doopage.com/assets/uploads/2019/11/bi-quyet-ban-hang-tren-shopee-hieu-qua1.jpg"
+                            style="width:98%; height: auto;">
                         <div class="text1">Shoppe five</div>
                     </div>
                     <div class="mySlides fade">
                         <div class="numbertext">6 / 6</div>
-                        <img src="https://businessmirror.com.ph/wp-content/uploads/2021/08/9.9-Celebrity-Reveal-Main-KV.jpg"
-                            style="width:98%; height: 471px;">
+                        <img src="https://hbmedia.com.vn/wp-content/uploads/2019/10/guichimy74.jpg"
+                            style="width:98%; height: auto;">
                         <div class="text1">Shoppe six</div>
                     </div>
 
@@ -592,7 +645,7 @@
                 </div>
                 <div class="product">
                     <div class="product1">
-                        <img src="https://icdn.dantri.com.vn/thumb_w/640/2019/03/06/nhiepanhgia-2-1551849137024.jpg"
+                        <img src="https://chupanhvn.s3.ap-southeast-1.amazonaws.com/wp-content/uploads/2017/03/23075849/chup-anh-quan-ao2.jpg"
                             alt="">
                         <div class="content">
                             <div>Kem dưỡng da dành cho nam giới</div>
@@ -607,7 +660,7 @@
 
                     </div>
                     <div class="product1">
-                        <img src="https://icdn.dantri.com.vn/thumb_w/640/2019/03/06/nhiepanhgia-2-1551849137024.jpg"
+                        <img src="https://nhatminhdecor.com/wp-content/uploads/2019/01/chup-anh-voi-phong-nen-vai-trang.jpg"
                             alt="">
                         <div class="content">
                             <div>Kem dưỡng da dành cho nam giới</div>
@@ -622,7 +675,7 @@
 
                     </div>
                     <div class="product1">
-                        <img src="https://icdn.dantri.com.vn/thumb_w/640/2019/03/06/nhiepanhgia-2-1551849137024.jpg"
+                        <img src="https://bizweb.dktcdn.net/100/350/935/files/anh1-ao-thun-ngoai-co.jpg?v=1570006188821"
                             alt="">
                         <div class="content">
                             <div>Kem dưỡng da dành cho nam giới</div>
@@ -839,7 +892,7 @@
             </div>
         </div>
         <div class="main_third">
-            <img src="https://icdn.dantri.com.vn/thumb_w/640/2019/03/06/nhiepanhgia-2-1551849137024.jpg" alt="">
+            <img src="https://studiovietnam.com/wp-content/uploads/2020/06/dich-vu-chup-anh-quang-cao-san-pham-03.jpg" alt="">
         </div>
     </div>
 
@@ -878,9 +931,10 @@
         
             <div class="infomation">
                 <div>THEO DÕI CHÚNG TÔI TRÊN</div>
-                <a href=""><i style="margin-right: 4px;" class="fab fa-facebook"></i> Facebook</a>
-                <a href=""><i style="margin-right: 4px;" class="fab fa-instagram"></i> Instagram</a>
-                <a href=""><i style="margin-right: 4px;" class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://www.facebook.com/profile.php?id=100004271205523"><i style="margin-right: 4px;" class="fab fa-facebook"></i> Facebook</a>
+                <a href="https://www.instagram.com/"><i style="margin-right: 4px;" class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://www.youtube.com/channel/UCSHokO5u1umyeVlgEcnqhPA"><i style="margin-right: 4px;" class="fab fa-youtube"></i> Youtube</a>
+                
             </div>
             <div class="infomation">
                 <div>QUỐC GIA & KHU VỰC</div>
